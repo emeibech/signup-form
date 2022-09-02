@@ -1,3 +1,36 @@
 * {
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family: Comfortaa;
+    src: url(/font/Comfortaa-Bold.ttf);
+  }
+
+.background-img {
+    height: 50vh;
+}
+
+.header {
+    position: relative;
+
+}
+
+.logo-bg {
+    position: absolute;
+    top: 20vh;
+    bottom: 20vh;
+    left: 0vw;
+    right: 0vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.5);
+}
+
+.logo-bg h1 {
+    color: white;
+    font-family: Comfortaa;
+    font-size: 2rem;
+}
+
