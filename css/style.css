@@ -1,19 +1,26 @@
+@font-face {
+    font-family: Comfortaa;
+    src: url(/font/Comfortaa-Bold.ttf);
+    font-display: swap;
+  }
+
 * {
     box-sizing: border-box;
+    /* border: 1px solid black; */
 }
 
 body {
+    width: 100vw;
     position: relative;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@font-face {
-    font-family: Comfortaa;
-    src: url(/font/Comfortaa-Bold.ttf);
+p {
+    font-size: clamp(1rem, 5vw, 1.5rem);
   }
 
 .background-img {
-    height: 50vh;
+    height: 50vmax;
 }
 
 .header {
@@ -36,12 +43,53 @@ body {
 .logo-bg h1 {
     color: white;
     font-family: Comfortaa;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .main {
-    padding: 5vw;
+
     position: absolute;
-    background-color: #f8eee7;
+    background-color: #fff5ef;
     top: 40vh;
+}
+
+/* input {
+    font-size: 1.1rem;
+    margin: 0.5vh;
+    padding: 0.5vh;
+} */
+
+/* label {
+    font-size: 1.3rem;
+    padding: 0.5vh;
+} */
+
+/* .main, 
+form {
+    width: 100vw;
+} */
+
+/* form {
+    display: flex;
+    border: 1px solid hotpink;
+} */
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+input {
+    width: clamp(250px, 70%, 500px);
+    font-size: 1.3rem;
+    padding-inline: 12px;
+    padding-block: 8px;
+    border-radius: 4px;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+label {
+    font-size: 1.2rem;
+    margin-top: 12px;
 }
