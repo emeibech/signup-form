@@ -1,8 +1,19 @@
 @font-face {
-    font-family: Comfortaa;
+    font-family: comfortaa;
     src: url(/font/Comfortaa-Bold.ttf);
     font-display: swap;
-  }
+}
+
+:root {
+  --step--2: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
+  --step--1: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.20rem);
+  --step-0: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+  --step-1: clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem);
+  --step-2: clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem);
+  --step-3: clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem);
+  --step-4: clamp(2.07rem, calc(1.45rem + 3.10vw), 3.66rem);
+  --step-5: clamp(2.49rem, calc(1.67rem + 4.08vw), 4.58rem);
+}
 
 * {
     box-sizing: border-box;
@@ -14,7 +25,12 @@ body {
 }
 
 .background-img {
-    height: 70vmax;
+    height: 65vmax;
+}
+
+.logo {
+    width: var(--step-5);
+    height: var(--step-5);
 }
 
 .logo-bg {
@@ -30,9 +46,9 @@ body {
 }
 
 .logo-bg h1 {
+    font-size: var(--step-4);
     color: white;
-    font-family: Comfortaa;
-    font-size: clamp(1rem, 2rem, 4rem);
+    font-family: comfortaa;
 }
 
 .main {
@@ -40,12 +56,18 @@ body {
     position: absolute;
     background-color: #fff5ef;
     top: 40vh;
-    width: 100vw;
+    width: max(300px, 100vw);
+    font-family: comfortaa;
 }
 
 .main p {
-    font-size: 1.2rem;
-    padding-inline: 1rem;
+    font-size: var(--step-0);
+    padding-inline: var(--step-1);
+}
+
+legend,
+label {
+    padding-inline: var(--step--2);
 }
 
 fieldset {
@@ -57,30 +79,41 @@ fieldset {
     border-top: 2px solid rgb(243, 223, 204);
     border-bottom: 2px solid rgb(243, 223, 204);
     box-shadow: 0px 2px 2px rgb(243, 218, 194);
-    padding-block: 48px;
+    padding-block: 32px;
 }
 
 legend {
     position: absolute;
-    top: 1rem;
-    font-size: 1.4rem;
+    top: 1.2rem;
+    font-size: var(--step-0);
     font-weight: 500;
 }
 
 label {
+    font-size: var(--step--1);
     margin-top: 16px;
-    letter-spacing: 0.1rem;
+    margin-bottom: 4px;
+    letter-spacing: 0.05rem;
+    color: rgb(90, 65, 47);
+}
+
+label[for='first_name'] {
+    margin-top: 48px;
 }
 
 input {
     width: clamp(250px, 80%, 320px);
     font-size: 1.2rem;
-    padding-inline: 12px;
+    margin-inline: var(--step--2);
     padding-block: 6px;
     border-radius: 4px;
     border: 1px solid rgb(179, 164, 151);
 }
 
 button {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.3rem;
+    padding: 12px 16px;
+    width: 250px;
+    margin-inline-start: var(--step-1);
 }
