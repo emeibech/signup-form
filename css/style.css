@@ -5,6 +5,7 @@
 }
 
 :root {
+  --step--3: clamp(0.58rem, calc(0.50rem + 0.37vw), 0.77rem);
   --step--2: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
   --step--1: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.20rem);
   --step-0: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
@@ -62,12 +63,12 @@ body {
 
 .main p {
     font-size: var(--step-0);
-    padding-inline: var(--step-1);
 }
 
+.main p,
 legend,
 label {
-    padding-inline: var(--step--2);
+    padding-inline: var(--step--1);
 }
 
 fieldset {
@@ -80,6 +81,7 @@ fieldset {
     border-bottom: 2px solid rgb(243, 223, 204);
     box-shadow: 0px 2px 2px rgb(243, 218, 194);
     padding-block: 32px;
+    padding-inline: 0;
 }
 
 legend {
@@ -103,17 +105,16 @@ label[for='first_name'] {
 
 input {
     width: clamp(250px, 80%, 320px);
-    font-size: 1.2rem;
-    margin-inline: var(--step--2);
+    font-size: var(--step-0);
+    margin-inline: var(--step--1);
     padding-block: 6px;
     border-radius: 4px;
     border: 1px solid rgb(179, 164, 151);
 }
 
 button {
+    margin-inline: var(--step--1);
     margin-top: 1rem;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1rem;
     padding: 12px 16px;
-    width: 250px;
-    margin-inline-start: var(--step-1);
 }
