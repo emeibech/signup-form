@@ -1,6 +1,6 @@
 @font-face {
     font-family: comfortaa;
-    src: url(https://raw.githubusercontent.com/emeibech/signup-form/main/font/Comfortaa-Bold.ttf);
+    src: url(../font/Comfortaa-Bold.ttf);
     font-display: swap;
 }
 
@@ -34,7 +34,7 @@ a {
 
 body {
     font-family: var(--system-font);
-    background-image: url(https://raw.githubusercontent.com/emeibech/signup-form/main/img/paige-cody--esAIGzeMqU-unsplash.jpg);
+    background-image: url(../img/paige-cody--esAIGzeMqU-unsplash.jpg);
     background-size: 100vw auto;
     position: relative;
     background-color: #fff5ef;
