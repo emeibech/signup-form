@@ -6,17 +6,30 @@
 
 :root {
   /* fluid font sizes */
-  --step--5: clamp(0.40rem, calc(0.37rem + 0.17vw), 0.49rem);
-  --step--4: clamp(0.48rem, calc(0.43rem + 0.26vw), 0.61rem);
-  --step--3: clamp(0.58rem, calc(0.50rem + 0.37vw), 0.77rem);
-  --step--2: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
-  --step--1: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.20rem);
-  --step-0: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
-  --step-1: clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem);
-  --step-2: clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem);
-  --step-3: clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem);
-  --step-4: clamp(2.07rem, calc(1.45rem + 3.10vw), 3.66rem);
-  --step-5: clamp(2.49rem, calc(1.67rem + 4.08vw), 4.58rem);
+  --step--5: clamp(0.39rem, calc(0.41rem + -0.02vw), 0.40rem);
+  --step--4: clamp(0.48rem, calc(0.48rem + 0.01vw), 0.49rem);
+  --step--3: clamp(0.58rem, calc(0.57rem + 0.06vw), 0.61rem);
+  --step--2: clamp(0.69rem, calc(0.67rem + 0.13vw), 0.76rem);
+  --step--1: clamp(0.83rem, calc(0.79rem + 0.23vw), 0.95rem);
+  --step-0: clamp(1.00rem, calc(0.93rem + 0.37vw), 1.19rem);
+  --step-1: clamp(1.20rem, calc(1.09rem + 0.55vw), 1.48rem);
+  --step-2: clamp(1.44rem, calc(1.28rem + 0.81vw), 1.86rem);
+  --step-3: clamp(1.73rem, calc(1.50rem + 1.15vw), 2.32rem);
+  --step-4: clamp(2.07rem, calc(1.75rem + 1.61vw), 2.90rem);
+  --step-5: clamp(2.49rem, calc(2.04rem + 2.22vw), 3.62rem);
+  
+  /* fluid margins and padding */
+  --mp--5: clamp(0.53rem, calc(0.52rem + 0.05vw), 0.55rem);
+  --mp--4: clamp(0.63rem, calc(0.61rem + 0.11vw), 0.69rem);
+  --mp--3: clamp(0.76rem, calc(0.72rem + 0.20vw), 0.86rem);
+  --mp--2: clamp(0.91rem, calc(0.85rem + 0.33vw), 1.08rem);
+  --mp--1: clamp(1.09rem, calc(0.99rem + 0.50vw), 1.35rem);
+  --mp-0: clamp(1.31rem, calc(1.17rem + 0.73vw), 1.69rem);
+  --mp-1: clamp(1.58rem, calc(1.37rem + 1.04vw), 2.11rem);
+  --mp-2: clamp(1.89rem, calc(1.60rem + 1.46vw), 2.64rem);
+  --mp-3: clamp(2.27rem, calc(1.87rem + 2.00vw), 3.30rem);
+  --mp-4: clamp(2.72rem, calc(2.18rem + 2.73vw), 4.12rem);
+  --mp-5: clamp(3.27rem, calc(2.53rem + 3.68vw), 5.15rem);
 
   /* fallback font */
   --system-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -30,7 +43,15 @@
 
 a {
     text-decoration: none;
+    color: #e93974;
+    display: inline-block;
 }
+
+a:hover {
+    color: #71a4ca;
+}
+
+
 
 body {
     font-family: var(--system-font);
@@ -41,7 +62,6 @@ body {
 }
 
 .header {
-    /* display: none; */
     position: relative;
     top: 5vh;
 }
@@ -65,7 +85,6 @@ body {
 }
 
 .main {
-    /* display: none; */
     position: absolute;
     background-color: #fff5ef;
     top: 40vh;
@@ -78,16 +97,17 @@ body {
     font-size: var(--step-0);
     line-height: 1.3rem;
     max-width: 60ch;
+    text-align: center;
 }
 
 .info p {
-    padding-block: var(--step-1);
+    padding-block: var(--mp-0);
 }
 
 .main p,
 legend,
 label {
-    padding-inline: var(--step-0);
+    padding-inline: var(--mp-0);
 }
 
 fieldset {
@@ -105,9 +125,10 @@ fieldset {
 
 legend {
     position: absolute;
-    top: var(--step-2);
+    top: var(--mp-2);
     font-size: var(--step-0);
     font-weight: 500;
+    place-self: center;
 }
 
 label {
@@ -119,22 +140,22 @@ label {
 }
 
 label[for='first_name'] {
-    margin-top: var(--step-5);
+    margin-top: var(--mp-5);
 }
 
 input {
     width: clamp(250px, 80%, 320px);
     font-size: var(--step-0);
-    margin-inline: var(--step-0);
-    padding-block: var(--step--5);
-    padding-inline: var(--step--4);
+    margin-inline: var(--mp-0);
+    padding-block: var(--mp--5);
+    padding-inline: var(--mp--4);
     border-radius: 4px;
     border: 1px solid rgb(179, 164, 151);
     font-family: var(--system-font);
 }
 
 button {
-    margin-inline: var(--step-0);
+    margin-inline: var(--mp-0);
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 12px 16px;
@@ -142,41 +163,51 @@ button {
     color: rgb(70, 50, 50);
     border-radius: 3rem;
     font-family: var(--system-font);
-    border: 1px solid rgb(70, 50, 50);;
+    border: 1px solid rgb(245, 223, 195);
+    place-self: center;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(247, 227, 201);
+    border: 1px solid rgb(245, 223, 195);
+}
+
+form {
+    display: grid;
 }
 
 @media (orientation: landscape) {
 
     body {
-        background-size: 60vw auto;
+        background-size: 70vw auto;
         background-repeat: no-repeat;
     }
     
     .header {
-        position: fixed;
+        position: absolute;
         top: 25vh;
         left: 0;
-        right: 40vw;
+        right: 30vw;
     }
     
     .main {
         top: 0;
-        left: 60vw;
-        width: 40vw;
+        left: 70vw;
+        width: 30vw;
     }
 
     .info p,
     label,
     legend {
-        padding-inline: var(--step-3);
+        padding-inline: var(--mp-1);
     }
 
-    input,
-    button {
-        margin-inline: var(--step-3);
+    input {
+        margin-inline: var(--mp-1);
     }
 
     .main {
-        padding-top: var(--step--1);
+        padding-top: var(--mp-5);
     }
 }
