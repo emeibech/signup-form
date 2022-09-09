@@ -35,12 +35,12 @@
   --system-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-* {
+*, *:before, *:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
+  }
+  
 a {
     text-decoration: none;
     color: #e93974;
@@ -50,8 +50,6 @@ a {
 a:hover {
     color: #71a4ca;
 }
-
-
 
 body {
     font-family: var(--system-font);
@@ -93,20 +91,13 @@ body {
     height: auto;
 }
 
-.main p {
-    font-size: var(--step-0);
-    line-height: 1.3rem;
-    max-width: 60ch;
-    text-align: center;
-}
-
 .info p {
-    padding-block: var(--mp-0);
+    padding-block: var(--mp--5);
 }
 
-.main p,
-legend,
-label {
+label,
+.required,
+.info > :first-child {
     padding-inline: var(--mp-0);
 }
 
@@ -119,28 +110,44 @@ fieldset {
     border-top: 2px solid rgb(243, 223, 204);
     border-bottom: 2px solid rgb(243, 223, 204);
     box-shadow: 0px 2px 2px rgb(243, 218, 194);
-    padding-block: 32px;
     padding-inline: 0;
+    padding-block: var(--mp--2);
 }
 
-legend {
-    position: absolute;
-    top: var(--mp-2);
-    font-size: var(--step-0);
-    font-weight: 500;
-    place-self: center;
+fieldset .required {
+    font-size: var(--step--1);
+    padding-block: 0;
+    color: rgb(78, 64, 46);
+    text-shadow: 0px 0px 1px;
+    margin-top: var(--mp--1);
+}
+
+fieldset > :first-child {
+    color: rgb(56, 48, 38);
+    text-shadow: 0px 0px 1px;
+    font-size: var(--step-1);
+    padding-inline: var(--mp--2);
+}
+
+span {
+    color: #e93974;
+}
+
+p {
+    text-align: center;
+}
+
+.required {
+    text-align: start;
+    font-size: var(--step--1);
 }
 
 label {
-    font-size: var(--step--1);
-    margin-top: 16px;
+    font-size: var(--step--2);
+    margin-top: var(--mp--2);
     margin-bottom: 4px;
     letter-spacing: 0.05rem;
     color: rgb(90, 65, 47);
-}
-
-label[for='first_name'] {
-    margin-top: var(--mp-5);
 }
 
 input {
@@ -159,24 +166,27 @@ button {
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 12px 16px;
-    background-color: antiquewhite;
-    color: rgb(70, 50, 50);
+    background-color: rgb(245, 200, 140);
+    color: rgb(61, 55, 46);
     border-radius: 3rem;
     font-family: var(--system-font);
-    border: 1px solid rgb(245, 223, 195);
+    border: 1px solid rgb(177, 144, 102);
     place-self: center;
     cursor: pointer;
+    font-weight: bolder;
+    box-shadow: 2px 2px 2px rgb(243, 218, 194);
 }
 
 button:hover {
-    background-color: rgb(247, 227, 201);
-    border: 1px solid rgb(245, 223, 195);
+    background-color: rgb(243, 191, 123);
+    color: rgb(53, 49, 44);
 }
 
 form {
     display: grid;
 }
 
+/* for desktop */
 @media (orientation: landscape) {
 
     body {
@@ -185,8 +195,8 @@ form {
     }
     
     .header {
-        position: absolute;
-        top: 25vh;
+        position: fixed;
+        top: 20vh;
         left: 0;
         right: 30vw;
     }
