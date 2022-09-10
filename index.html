@@ -26,10 +26,10 @@
                     <fieldset>
                         <p><b>Sign up now to get 1 book for free!</b></p>
                         <p class="required">Fields with <span>*</span> are required</p>
-                        <label required for="first_name">FIRST NAME<span> *</span></label>
-                        <input type="text" id="first_name" name="first_name" pattern="[a-zA-Z ]+">
+                        <label for="first_name">FIRST NAME<span> *</span></label>
+                        <input required type="text" id="first_name" name="first_name" pattern="[a-zA-Z ]+" minlength="2">
 
-                        <label for="last_name">LAST NAME</label>
+                        <label for="last_name">LAST NAME (Optional)</label>
                         <input type="text" id="last_name" name="last_name" pattern="[a-zA-Z ]+">
 
                         <label for="email">EMAIL<span> *</span></label>
@@ -39,10 +39,10 @@
                         <input required type="text" id="phone_number" name="phone_number" pattern="[+0-9]{11}" placeholder="09XXXXXXXXX">
 
                         <label for="password">PASSWORD (At least 8 characters)<span> *</span></label>
-                        <input required type="password" id="password" name="password" pattern=".{8}">
+                        <input required type="password" id="password" name="password" pattern=".{8,}">
 
                         <label for="confirm_password">CONFIRM PASSWORD<span> *</span></label>
-                        <input required type="password" id="confirm_password" name="confirm_password" pattern=".{8}">
+                        <input required type="password" id="confirm_password" name="confirm_password" pattern=".{8,}">
                     </fieldset>
                     <button>Create Account</button>
                 </form>
